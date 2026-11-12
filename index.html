@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ahad Hasan — Filmmaker & Video Editor</title>
+<meta name="description" content="Ahad Hasan — filmmaker, video editor and creative producer from Dhaka, Bangladesh. Documentary, short film, commercials, reels and concert videography.">
+<meta property="og:title" content="Ahad Hasan — Filmmaker & Video Editor">
+<meta property="og:image" content="assets/ahad-portrait.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0a0a0a;--bg2:#121212;--fg:#f2efe9;--mute:#8d8a85;--dim:#4a4845;
+  --acc:#ff4d2e;--line:rgba(242,239,233,.1);
+  --disp:'Bricolage Grotesque',system-ui,sans-serif;
+  --serif:'Instrument Serif',Georgia,serif;
+  --mono:'JetBrains Mono',ui-monospace,monospace;
+  color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--disp);font-weight:300;font-size:17px;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.wrap{max-width:1320px;margin:0 auto;padding:0 clamp(16px,4vw,40px)}
+section{padding:clamp(80px,12vw,150px) 0;position:relative}
+.eyebrow{font:500 12px var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--mute);display:flex;align-items:center;gap:12px;margin-bottom:28px}
+.eyebrow::before{content:"";width:28px;height:1px;background:var(--acc)}
+h2{font:700 clamp(44px,7.5vw,112px)/.92 var(--disp);letter-spacing:-.045em;margin:0 0 clamp(40px,6vw,72px)}
+h2 em,.serif{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing:-.02em}
+h2 em{color:var(--acc)}
+
+/* grain */
+body::after{content:"";position:fixed;inset:-50%;z-index:100;pointer-events:none;opacity:.06;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");animation:grain 1s steps(6) infinite}
+@keyframes grain{0%{transform:translate(0,0)}20%{transform:translate(-5%,3%)}40%{transform:translate(4%,-6%)}60%{transform:translate(-3%,5%)}80%{transform:translate(6%,2%)}100%{transform:translate(0,0)}}
+
+/* nav */
+nav{position:fixed;inset:0 0 auto;z-index:50;transition:background .4s,border-color .4s;border-bottom:1px solid transparent}
+nav.solid{background:rgba(10,10,10,.75);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-color:var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{font:800 18px var(--disp);letter-spacing:-.03em;display:flex;align-items:center;gap:10px}
+.logo i{width:9px;height:9px;border-radius:50%;background:var(--acc);box-shadow:0 0 12px var(--acc);animation:blink 1.6s infinite}
+@keyframes blink{50%{opacity:.25}}
+nav ul{display:flex;gap:34px;list-style:none;margin:0;padding:0;font:500 12px var(--mono);letter-spacing:.14em;text-transform:uppercase}
+nav ul a{color:var(--mute);transition:color .2s}nav ul a:hover{color:var(--fg)}
+.pill{font:500 12px var(--mono);letter-spacing:.12em;text-transform:uppercase;padding:11px 20px;border:1px solid var(--line);border-radius:99px;transition:.3s}
+.pill:hover{background:var(--fg);color:var(--bg)}
+@media(max-width:860px){nav ul{display:none}}
+
+/* hero */
+.hero{min-height:100svh;display:flex;align-items:flex-end;padding:120px 0 56px;position:relative;overflow:hidden}
+.hero-img{position:absolute;inset:0 0 0 auto;width:min(62%,900px);background:url(assets/ahad-portrait.jpg) 50% 18%/cover no-repeat;filter:grayscale(1) contrast(1.15) brightness(.72);-webkit-mask-image:linear-gradient(to left,#000 40%,transparent 95%);mask-image:linear-gradient(to left,#000 40%,transparent 95%);transform:scale(1.06);animation:slowzoom 18s ease-out forwards}
+.hero-img::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,var(--bg) 0,transparent 35%)}
+@keyframes slowzoom{to{transform:scale(1)}}
+.hero .wrap{position:relative;z-index:2;width:100%}
+.rec{position:absolute;top:96px;left:clamp(16px,4vw,40px);right:clamp(16px,4vw,40px);display:flex;justify-content:space-between;font:400 12px var(--mono);letter-spacing:.12em;color:var(--mute);z-index:2}
+.rec b{color:var(--acc);font-weight:500}
+.rec b::before{content:"● "}
+.hero h1{font:800 clamp(64px,15vw,240px)/.82 var(--disp);letter-spacing:-.06em;margin:0;text-transform:uppercase}
+.hero h1 span{display:block}
+.hero h1 .o{font-family:var(--serif);font-style:italic;font-weight:400;text-transform:none;letter-spacing:-.035em;color:#b9b4ac;margin-top:.04em}
+.hero-row{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;margin-top:40px;flex-wrap:wrap}
+.hero-row p{max-width:460px;margin:0;color:#c9c5be;font-size:clamp(17px,1.6vw,20px)}
+.hero-row p .serif{font-size:1.25em;color:var(--fg)}
+.roles{font:500 12px var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--mute);text-align:right;line-height:2}
+.roles b{color:var(--fg);font-weight:500}
+@media(max-width:760px){.hero-img{width:100%;opacity:.4;background-position:60% 10%}.roles{text-align:left}}
+
+/* marquee */
+.marquee{border-block:1px solid var(--line);overflow:hidden;padding:22px 0;white-space:nowrap}
+.marquee div{display:inline-flex;gap:48px;animation:mq 38s linear infinite;font:600 clamp(26px,3.6vw,46px) var(--disp);letter-spacing:-.03em}
+.marquee span:nth-child(even){font-family:var(--serif);font-style:italic;font-weight:400;color:var(--mute)}
+.marquee span::after{content:"✦";color:var(--acc);font-size:.5em;margin-left:48px;vertical-align:middle;font-style:normal}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* work */
+.work-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:clamp(16px,2vw,28px)}
+.card{position:relative;cursor:pointer;grid-column:span 6;display:block;text-align:left;background:none;border:0;padding:0;color:inherit;font:inherit}
+.card.feature{grid-column:1/-1}
+.card.reel{grid-column:span 3}
+.frame{position:relative;overflow:hidden;border-radius:6px;background:var(--bg2);aspect-ratio:16/9}
+.feature .frame{aspect-ratio:21/9}
+.reel .frame{aspect-ratio:9/16}
+.frame img{width:100%;height:100%;object-fit:cover;transition:transform 1s cubic-bezier(.2,.7,.2,1),filter .6s;filter:grayscale(.35) brightness(.8)}
+.card:hover .frame img{transform:scale(1.05);filter:grayscale(0) brightness(.95)}
+.frame::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.75),transparent 55%);pointer-events:none}
+.play{position:absolute;z-index:2;right:20px;bottom:20px;width:64px;height:64px;border-radius:50%;background:rgba(242,239,233,.12);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(242,239,233,.25);display:grid;place-items:center;transition:.35s}
+.play::before{content:"";border-left:14px solid var(--fg);border-block:9px solid transparent;margin-left:4px}
+.card:hover .play{background:var(--acc);border-color:var(--acc);transform:scale(1.1)}
+.cap{position:absolute;z-index:2;left:22px;bottom:20px;right:100px}
+.cap small{font:500 11px var(--mono);letter-spacing:.16em;text-transform:uppercase;color:#d0ccc5}
+.cap h3{font:700 clamp(22px,2.6vw,36px)/1.05 var(--disp);letter-spacing:-.03em;margin:6px 0 0}
+.feature .cap h3{font-size:clamp(34px,6vw,84px)}
+.cap h3 em{font-family:var(--serif);font-weight:400}
+.reel .cap{left:16px;right:16px;bottom:88px}.reel .cap h3{font-size:clamp(18px,1.8vw,24px)}
+.reel .play{right:auto;left:16px;bottom:16px;width:52px;height:52px}
+.poster{position:absolute;inset:0;display:grid;place-items:center;background:var(--pbg,#222)}
+.poster img{width:46%;height:auto;filter:none!important;transform:none!important;border-radius:50%}
+.more{grid-column:span 3;border:1px dashed rgba(242,239,233,.25);border-radius:6px;display:flex;flex-direction:column;justify-content:space-between;padding:24px;transition:.35s;aspect-ratio:9/16}
+.more:hover{border-color:var(--acc);background:rgba(255,77,46,.06)}
+.more b{font:700 clamp(26px,2.6vw,40px)/1 var(--disp);letter-spacing:-.04em}
+.more b em{font-family:var(--serif);font-weight:400;color:var(--acc)}
+.more span{font:500 12px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+.sub{font:500 12px var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--mute);margin:clamp(56px,7vw,90px) 0 24px;display:flex;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:14px}
+@media(max-width:900px){.card,.card.reel,.more{grid-column:span 6}.feature .frame{aspect-ratio:16/9}}
+@media(max-width:560px){.card,.card.reel,.more{grid-column:1/-1}.card.reel .frame,.more{aspect-ratio:4/5}}
+
+/* circles */
+.circles{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:40px 24px}
+.circles.big{grid-template-columns:repeat(auto-fill,minmax(190px,1fr))}
+.c{text-align:center}
+.disc{aspect-ratio:1;border-radius:50%;overflow:hidden;background:var(--cbg,#fff);margin:0 auto 16px;width:100%;max-width:170px;position:relative;box-shadow:0 0 0 1px var(--line);transition:box-shadow .5s,transform .5s}
+.big .disc{max-width:210px}
+.disc img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.disc.fit img{object-fit:contain;padding:var(--pad,18%)}
+.c:hover .disc img{transform:scale(1.12)}
+.c:hover .disc{box-shadow:0 0 0 1px var(--acc),0 18px 50px -18px rgba(255,77,46,.55)}
+.c strong{display:block;font:600 17px var(--disp);letter-spacing:-.01em}
+.c span{font:400 11px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+.mono .disc img{filter:grayscale(1) contrast(1.05)}
+.mono .c:hover .disc img{filter:none}
+.and{display:grid;place-items:center;font:400 italic 26px var(--serif);color:var(--mute);background:var(--bg2)!important}
+
+/* journey */
+.journey{display:grid;grid-template-columns:1.15fr 1fr;gap:clamp(32px,6vw,90px);align-items:center}
+.journey figure{margin:0;position:relative}
+.journey figure img{border-radius:6px;filter:grayscale(1) contrast(1.1) brightness(.85);transition:filter .8s}
+.journey figure:hover img{filter:none}
+.journey figcaption{font:400 12px var(--mono);letter-spacing:.08em;color:var(--mute);margin-top:14px}
+.tl{list-style:none;margin:0;padding:0;border-left:1px solid var(--line)}
+.tl li{padding:0 0 38px 30px;position:relative}
+.tl li::before{content:"";position:absolute;left:-5px;top:12px;width:9px;height:9px;border-radius:50%;background:var(--bg);border:1px solid var(--mute)}
+.tl li.now::before{background:var(--acc);border-color:var(--acc);box-shadow:0 0 14px var(--acc)}
+.tl b{font:800 clamp(40px,5vw,64px)/1 var(--disp);letter-spacing:-.05em;display:block;margin-bottom:8px}
+.tl li.now b{color:var(--acc)}
+.tl p{margin:0;color:#c9c5be;max-width:440px}
+.stats{display:flex;gap:clamp(24px,5vw,64px);margin-top:12px;flex-wrap:wrap}
+.stats div{font:400 12px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
+.stats strong{display:block;font:700 clamp(40px,5vw,60px)/1 var(--disp);letter-spacing:-.04em;color:var(--fg);margin-bottom:6px}
+@media(max-width:860px){.journey{grid-template-columns:1fr}}
+
+/* ventures */
+.ventures{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(16px,2vw,28px)}
+.v{border:1px solid var(--line);border-radius:6px;padding:clamp(28px,4vw,48px);display:flex;flex-direction:column;gap:18px;min-height:340px;position:relative;overflow:hidden;transition:border-color .4s}
+.v::before{content:"";position:absolute;inset:auto -20% -60% auto;width:70%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,var(--vc) 0,transparent 65%);opacity:.18;transition:opacity .5s,transform .8s}
+.v:hover{border-color:rgba(242,239,233,.3)}.v:hover::before{opacity:.35;transform:scale(1.15)}
+.v small{font:500 11px var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--mute)}
+.v h3{font:700 clamp(40px,5vw,72px)/.95 var(--disp);letter-spacing:-.05em;margin:auto 0 0}
+.v p{margin:0;color:#c9c5be;max-width:380px}
+.v .go{font:500 12px var(--mono);letter-spacing:.14em;text-transform:uppercase;display:flex;align-items:center;gap:10px}
+.v .go::after{content:"↗";font-size:18px;transition:transform .3s}.v:hover .go::after{transform:translate(4px,-4px)}
+@media(max-width:760px){.ventures{grid-template-columns:1fr}}
+
+/* skills */
+.skills{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,90px)}
+.bar{display:grid;grid-template-columns:1fr auto;gap:10px;padding:18px 0;border-bottom:1px solid var(--line);font-size:19px;font-weight:500}
+.bar span{font:400 13px var(--mono);color:var(--mute)}
+.bar i{grid-column:1/-1;height:2px;background:var(--line);position:relative}
+.bar i::after{content:"";position:absolute;inset:0 auto 0 0;width:0;background:var(--acc);transition:width 1.6s cubic-bezier(.2,.7,.2,1)}
+.in .bar i::after{width:var(--w)}
+.tags{display:flex;flex-wrap:wrap;gap:10px;align-content:flex-start}
+.tags span{border:1px solid var(--line);border-radius:99px;padding:10px 18px;font-size:15px;color:#c9c5be;transition:.3s}
+.tags span:hover{border-color:var(--fg);color:var(--fg)}
+.lead{font:300 clamp(22px,2.4vw,32px)/1.35 var(--disp);letter-spacing:-.02em;margin:0 0 36px}
+.lead em{font-family:var(--serif);color:var(--acc)}
+@media(max-width:860px){.skills{grid-template-columns:1fr}}
+
+/* contact */
+.contact h2{font-size:clamp(56px,11vw,180px)}
+.cl{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--line)}
+.cl a{padding:28px 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:16px;font:500 clamp(18px,2.2vw,28px) var(--disp);letter-spacing:-.02em;transition:.3s}
+.cl a:nth-child(odd){padding-right:28px;border-right:1px solid var(--line)}
+.cl a:nth-child(even){padding-left:28px}
+.cl a small{font:400 11px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--mute);display:block;margin-bottom:4px}
+.cl a::after{content:"↗";color:var(--mute);transition:.3s}
+.cl a:hover{color:var(--acc)}.cl a:hover::after{color:var(--acc);transform:translate(4px,-4px)}
+@media(max-width:760px){.cl{grid-template-columns:1fr}.cl a:nth-child(n){padding-left:0;padding-right:0;border-right:0}}
+footer{padding:36px 0 44px;color:var(--mute);font:400 12px var(--mono);letter-spacing:.08em}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:200;background:rgba(5,5,5,.94);backdrop-filter:blur(8px);display:none;align-items:center;justify-content:center;padding:clamp(16px,4vw,48px);flex-direction:column;gap:16px}
+.lb.open{display:flex}
+.lb .box{width:min(1200px,100%);aspect-ratio:16/9;max-height:80vh;background:#000;border-radius:6px;overflow:hidden}
+.lb.v916 .box{width:auto;height:min(82vh,900px);aspect-ratio:9/16}
+.lb iframe{width:100%;height:100%;border:0;display:block}
+.lb .bar2{width:min(1200px,100%);display:flex;justify-content:space-between;align-items:center;gap:16px;font:400 12px var(--mono);letter-spacing:.1em;color:var(--mute)}
+.lb.v916 .bar2{width:auto;min-width:min(420px,100%)}
+.lb .bar2 a{color:var(--fg);border-bottom:1px solid var(--acc)}
+.lb .x{position:absolute;top:18px;right:18px;width:48px;height:48px;border-radius:50%;border:1px solid var(--line);background:none;color:var(--fg);font-size:22px;cursor:pointer;transition:.3s}
+.lb .x:hover{background:var(--fg);color:var(--bg)}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(36px);transition:opacity 1s ease,transform 1s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<nav id="nav"><div class="wrap">
+  <a class="logo" href="#top"><i></i>AHAD HASAN</a>
+  <ul><li><a href="#work">Work</a></li><li><a href="#clients">Clients</a></li><li><a href="#journey">Journey</a></li><li><a href="#now">Now</a></li><li><a href="#about">About</a></li></ul>
+  <a class="pill" href="#contact">Let’s talk</a>
+</div></nav>
+
+<header class="hero" id="top">
+  <div class="hero-img" role="img" aria-label="Black and white portrait of Ahad Hasan"></div>
+  <div class="rec"><b>REC</b><span id="tc">00:00:00:00</span></div>
+  <div class="wrap">
+    <h1 class="rv"><span>Ahad</span><span class="o">Hasan</span></h1>
+    <div class="hero-row rv">
+      <p>Filmmaker &amp; video editor from Dhaka, <span class="serif">telling stories frame by frame</span> — documentaries, short films, brand films, reels and live music.</p>
+      <div class="roles"><b>Director · Editor · Producer</b><br>Since 2021 · Bangladesh &amp; abroad</div>
+    </div>
+  </div>
+</header>
+
+<div class="marquee" aria-hidden="true"><div>
+  <span>Documentary</span><span>Short film</span><span>Commercials</span><span>Reels</span><span>Podcasts</span><span>Concert films</span>
+  <span>Documentary</span><span>Short film</span><span>Commercials</span><span>Reels</span><span>Podcasts</span><span>Concert films</span>
+</div></div>
+
+<section id="work"><div class="wrap">
+  <div class="eyebrow">Selected work</div>
+  <h2 class="rv">Stories in <em>motion.</em></h2>
+  <div class="work-grid" id="films"></div>
+  <div class="sub"><span>Reels &amp; brand content</span><span>9:16</span></div>
+  <div class="work-grid" id="reels"></div>
+</div></section>
+
+<section id="clients" style="border-top:1px solid var(--line)"><div class="wrap">
+  <div class="eyebrow">Clients</div>
+  <h2 class="rv">Brands that <em>trusted</em> the frame.</h2>
+  <div class="circles rv" id="brands"></div>
+
+  <div class="sub"><span>Creators &amp; influencers</span><span>04</span></div>
+  <div class="circles big rv" id="people"></div>
+
+  <div class="sub"><span>Bands</span><span>03</span></div>
+  <div class="circles big rv" id="bands"></div>
+</div></section>
+
+<section id="journey" style="border-top:1px solid var(--line)"><div class="wrap">
+  <div class="eyebrow">The journey</div>
+  <h2 class="rv">Five years, <em>one frame</em> at a time.</h2>
+  <div class="journey">
+    <figure class="rv">
+      <img src="assets/artcell-concert.jpg" alt="Ahad Hasan with Artcell and crew backstage at a concert" loading="lazy">
+      <figcaption>↑ Backstage with Artcell — my first concert videography project.</figcaption>
+    </figure>
+    <div class="rv">
+      <ol class="tl">
+        <li><b>2021</b><p>Started my journey with <strong>Lumastrike Studios</strong> — learning to shoot, cut and tell stories on real productions.</p></li>
+        <li><b>Live</b><p>Shot my first concert film with <strong>Artcell</strong>, one of Bangladesh’s most iconic bands.</p></li>
+        <li class="now"><b>Now</b><p>Running my own team of video editors, working with clients in Bangladesh and abroad — and managing Protifolon Media &amp; Trivanta.</p></li>
+      </ol>
+      <div class="stats">
+        <div><strong>5+</strong>Years</div>
+        <div><strong>7+</strong>Brands</div>
+        <div><strong>3</strong>Bands</div>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<section id="now" style="border-top:1px solid var(--line)"><div class="wrap">
+  <div class="eyebrow">Currently managing</div>
+  <h2 class="rv">Beyond the <em>edit.</em></h2>
+  <div class="ventures">
+    <a class="v rv" style="--vc:#ff2d2d" href="https://www.youtube.com/@ProtifolonMedia" target="_blank" rel="noopener">
+      <small>Media · Podcasts</small>
+      <h3>Protifolon<br>Media</h3>
+      <p>Podcast and media production — from shoot to upload.</p>
+      <span class="go">YouTube</span>
+    </a>
+    <a class="v rv" style="--vc:#c13584" href="https://www.instagram.com/trivanta.play/" target="_blank" rel="noopener">
+      <small>Sports · Events</small>
+      <h3>Trivanta</h3>
+      <p>Sports and event management — tournaments and sports content in Bangladesh.</p>
+      <span class="go">Instagram</span>
+    </a>
+  </div>
+</div></section>
+
+<section id="about" style="border-top:1px solid var(--line)"><div class="wrap">
+  <div class="eyebrow">Toolkit</div>
+  <h2 class="rv">Behind the <em>frames.</em></h2>
+  <div class="skills">
+    <div class="rv">
+      <p class="lead">From concept to final grade — I <em>direct, shoot, edit</em> and deliver, with a team that keeps the turnaround tight.</p>
+      <div class="tags"><span>Cinematography</span><span>Documentary</span><span>Commercials</span><span>Reels &amp; short-form</span><span>Podcast production</span><span>Concert videography</span><span>Colour grading</span><span>Music production</span><span>Event management</span><span>Team leadership</span></div>
+    </div>
+    <div class="rv" id="bars"></div>
+  </div>
+</div></section>
+
+<section id="contact" class="contact" style="border-top:1px solid var(--line)"><div class="wrap">
+  <div class="eyebrow">Contact</div>
+  <h2 class="rv">Got a story?<br><em>Let’s shoot it.</em></h2>
+  <div class="cl rv">
+    <a href="mailto:ahadhasan@gmail.com"><div><small>Email</small>ahadhasan@gmail.com</div></a>
+    <a href="tel:+8801635328622"><div><small>Phone / WhatsApp</small>+880 1635-328622</div></a>
+    <a href="https://www.youtube.com/@ProtifolonMedia" target="_blank" rel="noopener"><div><small>YouTube</small>Protifolon Media</div></a>
+    <a href="https://www.instagram.com/trivanta.play/" target="_blank" rel="noopener"><div><small>Instagram</small>@trivanta.play</div></a>
+  </div>
+</div></section>
+
+<footer><div class="wrap"><span>© <span id="yr"></span> Ahad Hasan — Dhaka, Bangladesh</span><span>Stories · Frames · Ideas</span></div></footer>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Video player">
+  <button class="x" id="lbx" aria-label="Close">✕</button>
+  <div class="box" id="lbbox"></div>
+  <div class="bar2"><span id="lbt"></span><a id="lbo" target="_blank" rel="noopener">Open in new tab ↗</a></div>
+</div>
+
+<script>
+/* ======== EDIT CONTENT HERE ======== */
+const films=[
+  {t:"Aye, Bua",em:"এই, বুয়া",tag:"Documentary",yt:"uCGIXreHv-o",feature:true},
+  {t:"Ayor",em:"(2024)",tag:"Short film · Lumastrike Studios",yt:"OtoS7qSyq3Y"},
+  {t:"Prime Bank",em:"short podcast",tag:"Podcast · Brand",drive:"1lJF0e01nDE4q5GO0XOw5Qs3Ou9FAfIVy",poster:"assets/logos/primebank.jpeg",pbg:"#f4f4f4"}
+];
+const reels=[
+  {t:"bKash — Day One",tag:"Reel · bKash",drive:"11jVcpwcvrJQGfj3RWtUlqWWtkQyc1H3i"},
+  {t:"Stella Montage",tag:"Reel · Stella",drive:"1HXMYtvMf6PUUMz8bxwoH6f1oxobQ_pkR",poster:"assets/logos/stella.jpeg",pbg:"#5a0014"},
+  {t:"RM × Tecno",tag:"Reel · Brand",drive:"1oVs1nqnWS1v-byUmTyEZjJRHmIRuiYEb"}
+];
+const moreReels="https://drive.google.com/drive/folders/11Lk_25Co1xNHMQzd2UY5hs5F4G1hdDol";
+// fit:true = logo shown whole on a coloured disc; otherwise image fills the circle
+const brands=[
+  {n:"bKash",img:"assets/logos/bkash2.jpeg"},
+  {n:"Hyundai",img:"assets/logos/hyundai.jpeg",fit:true,pad:"12%"},
+  {n:"Kacchi Bhai",img:"assets/logos/kacchibhai.jpeg",fit:true,pad:"8%"},
+  {n:"Lifebuoy",img:"assets/logos/lifebuoy.jpeg",fit:true,pad:"12%"},
+  {n:"The Golf House",img:"assets/logos/thegolfhouse.jpeg",fit:true,pad:"12%"},
+  {n:"Stella",img:"assets/logos/stella.jpeg"},
+  {n:"Prime Bank",img:"assets/logos/primebank.jpeg"},
+  {n:"& many more",more:true}
+];
+const people=[
+  {n:"Rukaiya Jahan Chomok",r:"Actor · Creator",img:"assets/people/chamak.jpg"},
+  {n:"Enayet Chowdhury",r:"Educator · YouTuber",img:"assets/people/enayet.jpg"},
+  {n:"Oni Hasan",r:"Musician",img:"assets/people/oni.jpg"},
+  {n:"Nabil Hasan",r:"Creator",img:"assets/people/nabil.jpg"}
+];
+const bands=[
+  {n:"Arbovirus",r:"Band",img:"assets/logos/arbovirus.jpeg"},
+  {n:"Artcell",r:"Band · Concert film",img:"assets/logos/artcell.jpeg"},
+  {n:"Avoid Rafa",r:"Band",img:"assets/logos/avoidrafa.jpeg"}
+];
+const skills=[["Adobe Premiere Pro",100],["DaVinci Resolve",80],["Logic Pro",80],["Adobe After Effects",60],["Adobe Photoshop",60],["Adobe Illustrator",50]];
+/* =================================== */
+
+const $=s=>document.querySelector(s);
+const thumb=w=>w.poster?null:w.yt?`assets/work/${w.yt}.jpg`:`assets/work/${w.drive}.jpg`;
+function card(w,i,kind){
+  const p=thumb(w);
+  const cls=kind==="reel"?"reel":(w.feature?"feature":"");
+  const media=p?`<img src="${p}" alt="${w.t}" loading="lazy" onerror="this.src='${w.yt?`https://i.ytimg.com/vi/${w.yt}/hqdefault.jpg`:`https://drive.google.com/thumbnail?id=${w.drive}&sz=w1280`}';this.onerror=null">`
+    :`<div class="poster" style="--pbg:${w.pbg}"><img src="${w.poster}" alt=""></div>`;
+  return `<button class="card ${cls} rv" data-k="${kind}" data-i="${i}" aria-label="Play ${w.t}">
+    <div class="frame">${media}</div>
+    <div class="cap"><small>${w.tag}</small><h3>${w.t}${w.em?` <em>${w.em}</em>`:""}</h3></div>
+    <span class="play"></span></button>`;
+}
+$("#films").innerHTML=films.map((w,i)=>card(w,i,"film")).join("");
+$("#reels").innerHTML=reels.map((w,i)=>card(w,i,"reel")).join("")+
+  `<a class="more rv" href="${moreReels}" target="_blank" rel="noopener"><span>Google Drive</span><b>More reels &amp; <em>edits</em> ↗</b><span>Open folder</span></a>`;
+
+const circle=(x,mono)=>x.more?`<div class="c"><div class="disc and">&amp; more</div><strong>Many more</strong><span>Bangladesh &amp; abroad</span></div>`
+  :`<div class="c"><div class="disc ${x.fit?"fit":""}" style="${x.pad?`--pad:${x.pad}`:""}"><img src="${x.img}" alt="${x.n}" loading="lazy"></div><strong>${x.n}</strong>${x.r?`<span>${x.r}</span>`:""}</div>`;
+$("#brands").innerHTML=brands.map(b=>circle(b)).join("");
+$("#people").innerHTML=people.map(p=>circle(p)).join("");
+$("#bands").innerHTML=bands.map(b=>circle(b)).join("");
+$("#bars").innerHTML=skills.map(([n,v])=>`<div class="bar">${n}<span>${v/20}/5</span><i style="--w:${v}%"></i></div>`).join("");
+$("#yr").textContent=new Date().getFullYear();
+
+/* lightbox */
+const lb=$("#lb"),box=$("#lbbox");
+function openVid(w,vertical){
+  const ext=w.yt?`https://www.youtube.com/watch?v=${w.yt}`:`https://drive.google.com/file/d/${w.drive}/view`;
+  // YouTube refuses to embed on file:// pages — open it on YouTube instead
+  if(w.yt&&location.protocol==="file:"){window.open(ext,"_blank","noopener");return}
+  const src=w.yt?`https://www.youtube-nocookie.com/embed/${w.yt}?autoplay=1&rel=0&modestbranding=1&playsinline=1`
+                :`https://drive.google.com/file/d/${w.drive}/preview`;
+  box.innerHTML=`<iframe src="${src}" title="${w.t}" allow="autoplay; fullscreen; encrypted-media; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>`;
+  $("#lbt").textContent=w.t+" — "+w.tag;$("#lbo").href=ext;
+  lb.classList.toggle("v916",!!vertical);lb.classList.add("open");document.body.style.overflow="hidden";
+}
+function closeVid(){lb.classList.remove("open");box.innerHTML="";document.body.style.overflow=""}
+document.addEventListener("click",e=>{
+  const c=e.target.closest("button.card");if(!c)return;
+  const k=c.dataset.k;openVid((k==="reel"?reels:films)[c.dataset.i],k==="reel");
+});
+$("#lbx").onclick=closeVid;lb.addEventListener("click",e=>{if(e.target===lb)closeVid()});
+addEventListener("keydown",e=>{if(e.key==="Escape")closeVid()});
+
+/* nav + timecode */
+addEventListener("scroll",()=>$("#nav").classList.toggle("solid",scrollY>40),{passive:true});
+const t0=performance.now(),pad=n=>String(n).padStart(2,"0");
+(function tick(){const s=(performance.now()-t0)/1000;$("#tc").textContent=`${pad(s/3600|0)}:${pad(s/60%60|0)}:${pad(s%60|0)}:${pad(s*25%25|0)}`;requestAnimationFrame(tick)})();
+
+/* reveal */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll(".rv").forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
